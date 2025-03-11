@@ -101,8 +101,8 @@ Performs sparse jacobian evalution
 - `adj`: initial adjoint
 """
 function sjacobian!(y1, y2, f, x, adj)
-    @simd for i in eachindex(f.itr)
-        @inbounds sjacobian!(
+    @turbo for i in eachindex(f.itr)
+        sjacobian!(
             y1,
             y2,
             f.f.f,

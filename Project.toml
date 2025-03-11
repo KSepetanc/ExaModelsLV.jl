@@ -1,12 +1,13 @@
-name = "ExaModels"
-uuid = "1037b233-b668-4ce9-9b63-f9f681f55dd2"
+name = "ExaModelsLV"
+uuid = "d51b608f-2e67-4d42-a5f3-e087a02a6e2d"
 authors = ["Sungho Shin <sushin@mit.edu>"]
-version = "0.8.0"
+version = "0.9.0"
 
 [deps]
 NLPModels = "a4795742-8479-5a88-8948-cc11e1c8c1a6"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 SolverCore = "ff4d7338-4cf1-434d-91df-b86cb86fb843"
+LoopVectorization = "bdcacae8-1622-11e9-2a5c-532679323890"
 
 [weakdeps]
 AMDGPU = "21141c5a-9bdb-4563-92ae-f87d6854732e"

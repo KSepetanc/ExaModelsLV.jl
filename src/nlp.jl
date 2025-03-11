@@ -616,7 +616,7 @@ end
 
 function _cons_nln!(cons, x, g)
     _cons_nln!(cons.inner, x, g)
-    @simd for i in eachindex(cons.itr)
+    @turbo for i in eachindex(cons.itr)
         g[offset0(cons, i)] += cons.f.f(cons.itr[i], x)
     end
 end

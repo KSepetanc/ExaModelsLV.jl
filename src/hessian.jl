@@ -619,8 +619,8 @@ Performs sparse jacobian evalution
 - `adj2`: initial second adjoint
 """
 function shessian!(y1, y2, f, x, adj1, adj2)
-    @simd for k in eachindex(f.itr)
-        @inbounds shessian!(
+    @turbo for k in eachindex(f.itr)
+        shessian!(
             y1,
             y2,
             f.f.f,
@@ -634,8 +634,8 @@ function shessian!(y1, y2, f, x, adj1, adj2)
     end
 end
 function shessian!(y1, y2, f, x, adj1s::V, adj2) where {V<:AbstractVector}
-    @simd for k in eachindex(f.itr)
-        @inbounds shessian!(
+    @turbo for k in eachindex(f.itr)
+        shessian!(
             y1,
             y2,
             f.f.f,

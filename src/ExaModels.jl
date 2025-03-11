@@ -24,6 +24,7 @@ import NLPModels:
     jprod_nln!
 import SolverCore
 import Printf
+using LoopVectorization
 
 include("templates.jl")
 include("graph.jl")

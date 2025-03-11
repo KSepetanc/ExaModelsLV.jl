@@ -505,7 +505,7 @@ end
 
 function _compress!(V, buffer, ptr, sparsity, backend::Nothing)
     fill!(V, zero(eltype(V)))
-    @simd for i = 1:length(ptr)-1
+    @turbo for i = 1:length(ptr)-1
         for j = ptr[i]:ptr[i+1]-1
             V[i] += buffer[sparsity[j][2]]
         end
@@ -513,7 +513,7 @@ function _compress!(V, buffer, ptr, sparsity, backend::Nothing)
 end
 
 function _structure!(I, J, ptr, sparsity, backend::Nothing)
-    @simd for i = 1:length(ptr)-1
+    @turbo for i = 1:length(ptr)-1
         J[i], I[i] = sparsity[ptr[i]][1]
     end
 end
