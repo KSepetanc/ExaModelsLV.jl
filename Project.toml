@@ -1,6 +1,6 @@
-name = "ExaModelsLV"
+name = "ExaModels"
 uuid = "d51b608f-2e67-4d42-a5f3-e087a02a6e2d"
-authors = ["Sungho Shin <sushin@mit.edu>"]
+authors = ["Karlo Sepetanc <karlo.sepetanc@live.com>"]
 version = "0.9.0"
 
 [deps]

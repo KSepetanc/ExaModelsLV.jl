@@ -5,7 +5,7 @@ An algebraic modeling and automatic differentiation tool in Julia Language, spec
 
 For more information, please visit https://github.com/exanauts/ExaModels.jl
 """
-module ExaModelsLV
+module ExaModels
 
 import NLPModels:
     NLPModels,
